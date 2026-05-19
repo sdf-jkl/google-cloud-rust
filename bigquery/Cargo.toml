@@ -14,33 +14,33 @@ documentation = "https://docs.rs/gcloud-bigquery/latest/gcloud_bigquery/"
 doctest = false
 
 [dependencies]
-async-trait = "0.1"
+async-trait = "0.1.89"
 token-source = "1.0"
 google-cloud-googleapis = { package = "gcloud-googleapis", version="1.3.0", path = "../googleapis", features=["bigquery"]}
 google-cloud-gax = { package = "gcloud-gax", version = "1.4.0", path = "../foundation/gax"}
-thiserror = "2.0"
-tracing = "0.1"
+thiserror = "2.0.18"
+tracing = "0.1.41"
 reqwest = { version = "0.13", features = ["json", "stream", "multipart", "charset"], default-features = false }
-serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
-tokio = { version="1.32", features=["macros"] }
-time = { version = "0.3", features = ["std", "macros", "formatting", "parsing", "serde"] }
-arrow = { version = "58.1.0", default-features = false, features = ["ipc"] }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.145"
+tokio = { version="1.47.1", features=["macros"] }
+time = { version = "0.3.44", features = ["std", "macros", "formatting", "parsing", "serde"] }
+arrow = { version = "58.2.0", default-features = false, features = ["ipc"] }
 base64 = "0.22"
-bigdecimal = { version="0.4", features=["serde"] }
+bigdecimal = { version="0.4.10", features=["serde"] }
 num-bigint = "0.4"
 backon = { version = "1.2", default-features = false, features = ["tokio-sleep"] }
 reqwest-middleware = { version = "0.5", features = ["json", "multipart", "query"] }
-anyhow = "1.0"
-async-stream = "0.3"
+anyhow = "1.0.100"
+async-stream = "0.3.6"
 prost-types = "0.14"
 
 google-cloud-auth = { package = "gcloud-auth", optional = true, version = "1.3.0", path="../foundation/auth", default-features=false }
 
 [dev-dependencies]
-tokio = { version="1.32", features=["rt-multi-thread"] }
+tokio = { version="1.47.1", features=["rt-multi-thread"] }
 serial_test = "3.1"
-tracing-subscriber = { version="0.3.17", features=["env-filter"] }
+tracing-subscriber = { version="0.3.19", features=["env-filter"] }
 ctor = "0.5"
 google-cloud-auth = { package = "gcloud-auth", path = "../foundation/auth", default-features=false }
 base64-serde = "0.8"
