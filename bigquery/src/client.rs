@@ -747,7 +747,7 @@ impl Client {
                 .await
                 .map_err(query::run::Error::Http)?;
             if result.job_complete {
-                Ok(result.total_rows)
+                Ok(result.total_rows.unwrap_or_default())
             } else {
                 Err(query::run::Error::JobIncomplete)
             }

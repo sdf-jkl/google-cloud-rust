@@ -392,7 +392,7 @@ mod test {
                 .await
                 .unwrap();
             assert_eq!(query_results.rows.unwrap().len(), 1);
-            assert_eq!(query_results.total_rows, 3);
+            assert_eq!(query_results.total_rows, Some(3));
             if query_results.page_token.is_none() {
                 break;
             }
